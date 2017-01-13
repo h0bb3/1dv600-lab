@@ -1,0 +1,127 @@
+FORMAT: 1A
+
+# LNU Book Library
+This is the full api specification of the LNU Book Library. Press "Show" to expand on sections to see more details.
+
+## Books [/api/books]
+
++ Model (application/json)
+
+	```json
+	[{
+          "id": "0596517742",
+          "title": "JavaScript: The Good Parts",
+          "author": "Douglas Crockford",
+          "genre": "Programming",
+          "price": "17,69",
+          "publishDate": "2008-05-01",
+          "description": "Most programming languages contain good and bad parts, but JavaScript has more than its share of the bad, having been developed and released in a hurry before it could be refined. This authoritative book scrapes away these bad features to reveal a subset of JavaScript that's more reliable, readable, and maintainable than the language as a whole—a subset you can use to create truly extensible and efficient code."
+      },
+      {...}
+    ]
+	```
+
+### Get a list of books [GET]
+
++ Response 200
+	[Books][]
+
++ Response 404
+
+### Add a new book [PUT]
+
++ Request Book (application/json)
+
+	```json
+    	{
+              "id": "0596517742",
+              "title": "JavaScript: The Good Parts",
+              "author": "Douglas Crockford",
+              "genre": "Programming",
+              "price": "17,69",
+              "publishDate": "2008-05-01",
+              "description": "Most programming languages contain good and bad parts, but JavaScript has more than its share of the bad, having been developed and released in a hurry before it could be refined. This authoritative book scrapes away these bad features to reveal a subset of JavaScript that's more reliable, readable, and maintainable than the language as a whole—a subset you can use to create truly extensible and efficient code."
+         }
+    ```
+
++ Response 200
+
+
++ Response 404
+
+
+
+
+
+## Book [/api/books/{book_id}]
+
++ Parameters
+    + book_id (string) - The id of the book.
+
++ Model (application/json)
+
+	```json
+	{
+          "id": "0596517742",
+          "title": "JavaScript: The Good Parts",
+          "author": "Douglas Crockford",
+          "genre": "Programming",
+          "price": "17,69",
+          "publishDate": "2008-05-01",
+          "description": "Most programming languages contain good and bad parts, but JavaScript has more than its share of the bad, having been developed and released in a hurry before it could be refined. This authoritative book scrapes away these bad features to reveal a subset of JavaScript that's more reliable, readable, and maintainable than the language as a whole—a subset you can use to create truly extensible and efficient code."
+      }
+	```
+
+### Get a book [GET]
++ Response 200
+	[Book][]
+
++ Response 404
+
+### Update a book [POST]
++ Response 200
+
++ Response 404
+
+
+### Delete a book [DELETE]
++ Response 200
+
++ Response 404
+
+
+
+
+
+
+## Search [/api/books?{title}]
+
++ Model (application/json)
+
+	```json
+	[{
+          "id": "0596517742",
+          "title": "JavaScript: The Good Parts",
+          "author": "Douglas Crockford",
+          "genre": "Programming",
+          "price": "17,69",
+          "publishDate": "2008-05-01",
+          "description": "Most programming languages contain good and bad parts, but JavaScript has more than its share of the bad, having been developed and released in a hurry before it could be refined. This authoritative book scrapes away these bad features to reveal a subset of JavaScript that's more reliable, readable, and maintainable than the language as a whole—a subset you can use to create truly extensible and efficient code."
+      },
+      {...}
+    ]
+	```
+
+### Search books [GET]
+
++ Parameters
+    + title: `javascript` (string, required) - Filer the result by title (only add this parameter when searching).
+
++ Response 200
+	[Books][]
+
++ Response 404
+
+
+
+
