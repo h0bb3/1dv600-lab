@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = '1.8'
+
+mainClassName = 'lnu.Main'
+version = '0.1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'io.dropwizard:dropwizard-core:0.8.0'
+    compile 'io.dropwizard:dropwizard-assets:0.8.0'
+	compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
+    testCompile 'junit:junit:4.11'
+    testCompile 'io.dropwizard:dropwizard-testing:0.8.0'
+    testCompile 'org.easytesting:fest-assert:1.4'
+
+}
