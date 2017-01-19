@@ -16,7 +16,7 @@ public class GetBooksResource {
 	@GET
 	public String getBooks() {
 		// TODO: Task 1
-		return null;
+		return "";
 	}
 
 }
