@@ -2,7 +2,7 @@
   "name": "lnu-book-library",
   "version": "1.0.0",
   "scripts": {
-    "start": "forever -w -d --minUptime=1000 --spinSleepTime=1000  app.js",
+    "start": "nodemon -L app.js",
     "test": "mocha --reporter spec",
     "prestart": "npm test"
 
