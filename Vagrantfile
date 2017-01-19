@@ -22,5 +22,6 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", run:"always", privileged:false, inline: <<-SHELL
 	  cd /vagrant
 	  sudo npm install --no-bin-links
+	  npm start
   SHELL
 end
